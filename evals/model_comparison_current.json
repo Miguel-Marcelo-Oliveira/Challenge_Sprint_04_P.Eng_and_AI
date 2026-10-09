@@ -1,0 +1,566 @@
+[
+  {
+    "model": "gemma4:31b",
+    "temperature": 0.0,
+    "top_p": 0.95,
+    "max_tokens": 512,
+    "top_k": 3,
+    "rows": [
+      {
+        "question": "Quais são os modelos da linha HCA G2 apresentados no portfólio da GoodWe?",
+        "answer": "Os modelos da linha HCA G2 são GW7K-HCA-20, GW11K-HCA-20 e GW22K-HCA-20 [Fonte: GoodWe_Manual_Produtos.pdf, pág. 1].",
+        "faithfulness_fallback": 0.75,
+        "answer_relevancy_fallback": 0.667,
+        "latency_s": 2.975
+      },
+      {
+        "question": "Quais são as potências nominais dos modelos GW7K-HCA, GW11K-HCA e GW22K-HCA?",
+        "answer": "As potências nominais dos modelos são:\n* GW7K-HCA: 7 kW [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]\n* GW11K-HCA: 11 kW [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]\n* GW22K-HCA: 22 kW [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]",
+        "faithfulness_fallback": 0.548,
+        "answer_relevancy_fallback": 1.0,
+        "latency_s": 1.18
+      },
+      {
+        "question": "Qual modelo HCA é monofásico e quais modelos são trifásicos?",
+        "answer": "Com base nos documentos fornecidos, os modelos trifásicos são o GW11K-HCA e o GW22K-HCA [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]. Não há menção a qual modelo HCA é monofásico.",
+        "faithfulness_fallback": 0.454,
+        "answer_relevancy_fallback": 1.0,
+        "latency_s": 0.735
+      },
+      {
+        "question": "Qual é a tensão de operação indicada para os modelos HCA no Brasil?",
+        "answer": "Para os modelos HCA, as tensões indicadas para o dispositivo de proteção residual (RCD) são: 230 V (2P) para o modelo GW7K-HCA e 400 V (4P) para os modelos GW11K-HCA e GW22K-HCA [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1].",
+        "faithfulness_fallback": 0.667,
+        "answer_relevancy_fallback": 0.333,
+        "latency_s": 0.864
+      },
+      {
+        "question": "Quantos cartões RFID vêm incluídos e quantos cartões a linha HCA G2 suporta por carregador?",
+        "answer": "A linha HCA G2 inclui 2 cartões e suporta até 10 cartões por carregador [Fonte: GoodWe_Portfolio.pdf, pág. 13; GoodWe_Manual_Produtos.pdf, pág. 6].",
+        "faithfulness_fallback": 0.508,
+        "answer_relevancy_fallback": 0.545,
+        "latency_s": 0.657
+      },
+      {
+        "question": "Quais interfaces de comunicação estão integradas na linha HCA G2?",
+        "answer": "As interfaces de comunicação integradas na linha HCA G2 são RS-485, LAN, Wi-Fi e Bluetooth [Fonte: GoodWe_Portfolio.pdf, pág. 13].",
+        "faithfulness_fallback": 0.429,
+        "answer_relevancy_fallback": 0.833,
+        "latency_s": 0.674
+      },
+      {
+        "question": "Quais são os métodos de início da recarga disponíveis no HCA G2?",
+        "answer": "Não encontrei essa informação nos documentos fornecidos.",
+        "faithfulness_fallback": 0.167,
+        "answer_relevancy_fallback": 0.0,
+        "latency_s": 0.525
+      },
+      {
+        "question": "Quais são os três principais modos de carregamento da linha HCA?",
+        "answer": "Os três principais modos de carregamento da linha HCA G2 são:\n\n1. **Modo Fast**: permite definir a potência de carregamento, o SOC mínimo da bateria e a energia máxima da sessão [Fonte: GoodWe_Manual_Produtos.pdf, pág. 6].\n2. **Modo PV Priority**: permite definir “Min. Top Up”, o tempo para atingir esse valor e a energia máxima [Fonte: GoodWe_Manual_Produtos.pdf, pág. 6].\n3. **Modo PV & Battery**: acrescenta o limite de SOC da bateria às configurações [Fonte: GoodWe_Manual_Produtos.pdf, pág. 6].",
+        "faithfulness_fallback": 0.735,
+        "answer_relevancy_fallback": 1.0,
+        "latency_s": 0.818
+      },
+      {
+        "question": "Como funciona o modo Fast?",
+        "answer": "No modo Fast, o carregador utiliza energia da rede, da fotovoltaica ou da bateria [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]. A potência padrão é a nominal, porém o usuário pode configurar uma potência menor, desde que não ultrapasse o limite nominal [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]. Adicionalmente, a HCA G2 permite definir a potência de carregamento, a energia máxima da sessão e o SOC mínimo da bateria neste modo [Fonte: GoodWe_Manual_Produtos.pdf, pág. 6].",
+        "faithfulness_fallback": 0.681,
+        "answer_relevancy_fallback": 0.667,
+        "latency_s": 0.808
+      },
+      {
+        "question": "Como funciona o modo PV Priority?",
+        "answer": "No modo PV Priority, apenas a energia fotovoltaica é utilizada para carregar o veículo, sendo que as cargas da residência têm prioridade e o excedente PV é direcionado ao EV [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1].\n\nPara o seu funcionamento, são necessárias as seguintes condições:\n*   Um sistema composto por carregador e inversor (cenário PV–armazenamento–carregamento) [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1; GoodWe_Manual_Produtos.pdf, pág. 3].\n*   A função de limitação de potência do inversor deve estar desativada [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1; GoodWe_Manual_Produtos.pdf, pág. 3].\n*   A potência PV deve ser superior a 1,4 kW para carregadores monofásicos e superior a 4,2 kW para carregadores trifásicos [Fonte: GoodWe_Manual_Produtos.pdf, pág. 3].",
+        "faithfulness_fallback": 0.476,
+        "answer_relevancy_fallback": 0.667,
+        "latency_s": 1.152
+      },
+      {
+        "question": "Como funciona o modo PV + Battery?",
+        "answer": "No modo PV + Battery, o carregador utiliza energia fotovoltaica e da bateria para carregar o veículo, mantendo a prioridade para as cargas da residência [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]. Este modo exige o cenário PV–armazenamento–carregamento e a desativação da limitação de potência do inversor [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1].",
+        "faithfulness_fallback": 0.712,
+        "answer_relevancy_fallback": 0.667,
+        "latency_s": 1.086
+      },
+      {
+        "question": "O carregador HCA troca automaticamente entre os modos de carregamento?",
+        "answer": "Não, a GoodWe informa que o carregador não realiza troca automática entre os modos [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1].",
+        "faithfulness_fallback": 0.733,
+        "answer_relevancy_fallback": 0.667,
+        "latency_s": 0.605
+      },
+      {
+        "question": "O que acontece com a recarga quando não há energia solar suficiente?",
+        "answer": "Nos modos PV Priority ou PV + Battery, a recarga pode ser pausada quando não houver sol suficiente [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]. Caso a opção “Ensure Minimum Charging Power” esteja ativada, a rede ou a bateria manterá a potência mínima exigida, sendo 1,4 kW para o carregador de 7 kW e 4,2 kW para os modelos de 11 kW e 22 kW [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1].",
+        "faithfulness_fallback": 0.693,
+        "answer_relevancy_fallback": 0.571,
+        "latency_s": 0.859
+      },
+      {
+        "question": "Qual é a potência mínima de carregamento para os modelos de 7 kW, 11 kW e 22 kW quando a função Ensure Minimum Charging Power está ativada?",
+        "answer": "Quando a função \"Ensure Minimum Charging Power\" está ativada, os valores mínimos de potência são:\n\n*   **Carregadores de 7 kW:** 1,4 kW [Fonte: GoodWe_Manual_Produtos.pdf, pág. 3; GoodWe_FAQ_Carregamento.pdf, pág. 1].\n*   **Carregadores de 11 kW ou 22 kW:** 4,2 kW [Fonte: GoodWe_Manual_Produtos.pdf, pág. 3; GoodWe_FAQ_Carregamento.pdf, pág. 1].",
+        "faithfulness_fallback": 0.338,
+        "answer_relevancy_fallback": 0.833,
+        "latency_s": 0.792
+      },
+      {
+        "question": "Por que um veículo pode não carregar a 22 kW mesmo quando o carregador tem potência nominal de 22 kW?",
+        "answer": "A potência real de carregamento depende do carregador de bordo (OBC) do veículo. No caso de um carregador trifásico de 22 kW, ele entregará no máximo 1/3 da potência nominal para um veículo que seja somente monofásico [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1].",
+        "faithfulness_fallback": 0.75,
+        "answer_relevancy_fallback": 0.4,
+        "latency_s": 0.729
+      },
+      {
+        "question": "Qual é a corrente mínima por fase para iniciar a carga?",
+        "answer": "A corrente mínima de partida é de 6 A por fase [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1] [Fonte: GoodWe_Manual_Produtos.pdf, pág. 3].",
+        "faithfulness_fallback": 0.333,
+        "answer_relevancy_fallback": 0.6,
+        "latency_s": 0.614
+      },
+      {
+        "question": "Qual é a potência mínima do OBC para carga monofásica e trifásica?",
+        "answer": "A potência mínima do OBC é de 1,4 kW em carga monofásica e 4,2 kW em carga trifásica [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1] [Fonte: GoodWe_Manual_Produtos.pdf, pág. 3].",
+        "faithfulness_fallback": 0.391,
+        "answer_relevancy_fallback": 1.0,
+        "latency_s": 0.609
+      },
+      {
+        "question": "O carregador HCA G2 pode ser instalado ao ar livre?",
+        "answer": "Sim. A ficha técnica HCA G2 informa que a instalação pode ser interna ou externa, possuindo grau de proteção IP66 no carregador e IP55 no plugue IEC Type 2, embora o manual recomende um local abrigado, ventilado e adequado para operação e manutenção [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1].",
+        "faithfulness_fallback": 0.727,
+        "answer_relevancy_fallback": 0.667,
+        "latency_s": 0.903
+      },
+      {
+        "question": "Quais são os graus de proteção IP do carregador e do plugue IEC Type 2?",
+        "answer": "O carregador possui grau de proteção IP66 e o plugue IEC Type 2 possui grau de proteção IP55 [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1].",
+        "faithfulness_fallback": 0.667,
+        "answer_relevancy_fallback": 0.833,
+        "latency_s": 0.626
+      },
+      {
+        "question": "Qual tipo de RCD externo é exigido pelo manual?",
+        "answer": "O manual exige um RCD externo tipo A com corrente residual nominal de 30 mA [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]. Para o modelo GW7K-HCA, é especificado adicionalmente que o RCD deve ter característica C [Fonte: GoodWe_Manual_Produtos.pdf, pág. 4].",
+        "faithfulness_fallback": 0.607,
+        "answer_relevancy_fallback": 0.667,
+        "latency_s": 0.982
+      },
+      {
+        "question": "Qual cabo AC é especificado pela GoodWe para a instalação?",
+        "answer": "Não encontrei essa informação nos documentos fornecidos.",
+        "faithfulness_fallback": 0.0,
+        "answer_relevancy_fallback": 0.0,
+        "latency_s": 0.742
+      },
+      {
+        "question": "O carregador pode ser utilizado para carregar outros equipamentos além de veículos elétricos?",
+        "answer": "Não. O manual oficial afirma que o equipamento suporta apenas o carregamento de veículos elétricos e proíbe o carregamento de outros dispositivos [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1].",
+        "faithfulness_fallback": 0.789,
+        "answer_relevancy_fallback": 0.3,
+        "latency_s": 1.432
+      },
+      {
+        "question": "O usuário pode desmontar o carregador para realizar manutenção?",
+        "answer": "Não. O manual proíbe desmontar os módulos pessoalmente [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 2]. Toda instalação, operação, manutenção e substituição de peças deve ser realizada por profissionais qualificados ou treinados [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 2]. Além disso, é instruído a não desmontar módulos do carregador [Fonte: GoodWe_Manual_Produtos.pdf, pág. 6].",
+        "faithfulness_fallback": 0.625,
+        "answer_relevancy_fallback": 0.5,
+        "latency_s": 1.338
+      },
+      {
+        "question": "O que deve ser feito em caso de anomalia no carregador?",
+        "answer": "Em caso de anomalia, deve-se acionar o botão de emergência para desconectar a alimentação. Não deve ser realizado o carregamento quando houver cabo rompido ou falha ativa, sendo necessário procurar um profissional qualificado para o diagnóstico [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 2].",
+        "faithfulness_fallback": 0.701,
+        "answer_relevancy_fallback": 0.667,
+        "latency_s": 0.664
+      },
+      {
+        "question": "Qual aplicativo é utilizado para configuração e operação local do carregador?",
+        "answer": "Não encontrei essa informação nos documentos fornecidos.",
+        "faithfulness_fallback": 0.167,
+        "answer_relevancy_fallback": 0.0,
+        "latency_s": 0.512
+      },
+      {
+        "question": "Qual plataforma é utilizada para monitoramento e controle remoto?",
+        "answer": "A plataforma utilizada para gerenciamento, aquisição de dados e configurações (como a programação de recarga e a função AUTO Start) é o SEMS+ [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 2].",
+        "faithfulness_fallback": 0.611,
+        "answer_relevancy_fallback": 0.4,
+        "latency_s": 0.638
+      },
+      {
+        "question": "Como funciona o agendamento de recarga no SEMS+?",
+        "answer": "Para programar a recarga para um horário específico no SEMS+, deve-se selecionar a usina, acessar \"Device\", escolher o carregador e utilizar a função “Scheduled Charging”, definindo o horário de início, término, tempo estimado, repetição e modo de carregamento [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 2].",
+        "faithfulness_fallback": 0.645,
+        "answer_relevancy_fallback": 0.5,
+        "latency_s": 0.691
+      },
+      {
+        "question": "O que é Dynamic Load Control e qual é sua finalidade?",
+        "answer": "O Dynamic Load Control é o controle dinâmico de carga que equilibra a velocidade de carregamento ou pausa a recarga com base nos dados do medidor e na corrente de conexão à rede configurada [Fonte: GoodWe_Manual_Produtos.pdf, pág. 3]. Sua finalidade é evitar o disparo do fusível principal, reiniciando o carregador automaticamente quando houver folga suficiente em relação à corrente contratada ou configurada [Fonte: GoodWe_Manual_Produtos.pdf, pág. 3; GoodWe_FAQ_Carregamento.pdf, pág. 2].",
+        "faithfulness_fallback": 0.638,
+        "answer_relevancy_fallback": 1.0,
+        "latency_s": 1.334
+      },
+      {
+        "question": "O que é a função AUTO Start na HCA G2?",
+        "answer": "Os documentos fornecidos mencionam que a HCA G2 permite ativar ou desativar o AUTO Start [Fonte: GoodWe_Manual_Produtos.pdf, pág. 6], porém não descrevem a função específica desta ferramenta.",
+        "faithfulness_fallback": 0.371,
+        "answer_relevancy_fallback": 1.0,
+        "latency_s": 0.702
+      },
+      {
+        "question": "Como funciona a função Plug and Charge?",
+        "answer": "A função Plug and Charge funciona da seguinte forma:\n\n1.  **Habilitação:** A função deve ser habilitada no SolarGo [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 2; GoodWe_Manual_Produtos.pdf, pág. 5].\n2.  **Operação:** Uma vez habilitada, basta conectar o plugue ao veículo para que a recarga seja iniciada automaticamente [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 2; GoodWe_Manual_Produtos.pdf, pág. 5].\n3.  **Observação Técnica:** A GoodWe adverte que a função pode falhar devido à influência do OBC (carregador de bordo) caso a opção “Ensure Minimum Charging Power” esteja desativada [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 2; GoodWe_Manual_Produtos.pdf, pág. 3].",
+        "faithfulness_fallback": 0.528,
+        "answer_relevancy_fallback": 1.0,
+        "latency_s": 0.952
+      },
+      {
+        "question": "O que significa o LED azul no carregador HCA?",
+        "answer": "O LED azul fixo significa que o carregador está em processo de carregamento [Fonte: GoodWe_Manual_Produtos.pdf, pág. 5].",
+        "faithfulness_fallback": 0.5,
+        "answer_relevancy_fallback": 0.8,
+        "latency_s": 0.566
+      },
+      {
+        "question": "O que significa o LED verde fixo?",
+        "answer": "O LED verde fixo significa que o carregador está em espera [Fonte: GoodWe_Manual_Produtos.pdf, pág. 5].",
+        "faithfulness_fallback": 0.538,
+        "answer_relevancy_fallback": 1.0,
+        "latency_s": 0.567
+      },
+      {
+        "question": "O que significa o LED verde piscando?",
+        "answer": "Não encontrei essa informação nos documentos fornecidos.",
+        "faithfulness_fallback": 0.0,
+        "answer_relevancy_fallback": 0.0,
+        "latency_s": 0.0
+      },
+      {
+        "question": "O que significa o LED vermelho fixo?",
+        "answer": "O LED vermelho fixo indica falha [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 2].",
+        "faithfulness_fallback": 0.636,
+        "answer_relevancy_fallback": 0.75,
+        "latency_s": 2.669
+      },
+      {
+        "question": "O carregador pode ser utilizado durante uma tempestade com chuva e raios?",
+        "answer": "Não, o equipamento não deve ser utilizado para recarregar durante tempestades com raios e chuva; caso seja necessário, deve-se garantir que o plugue e a porta de carga estejam secos [Fonte: GoodWe_Manual_Produtos.pdf, pág. 6].",
+        "faithfulness_fallback": 0.704,
+        "answer_relevancy_fallback": 0.625,
+        "latency_s": 0.651
+      },
+      {
+        "question": "Em que ano a GoodWe foi fundada?",
+        "answer": "Não encontrei essa informação nos documentos fornecidos.",
+        "faithfulness_fallback": 0.0,
+        "answer_relevancy_fallback": 0.0,
+        "latency_s": 0.481
+      },
+      {
+        "question": "Quantos países possuem instalações acumuladas de inversores GoodWe, segundo o portfólio?",
+        "answer": "A capacidade instalada de inversores GoodWe acumula 100 GW em mais de 100 países ao redor do mundo [Fonte: GoodWe_Portfolio.pdf, pág. 6].",
+        "faithfulness_fallback": 0.75,
+        "answer_relevancy_fallback": 0.333,
+        "latency_s": 0.725
+      },
+      {
+        "question": "Qual é a capacidade instalada acumulada de inversores GoodWe apresentada no portfólio?",
+        "answer": "A capacidade instalada acumulada de inversores GoodWe é de 100 GW em mais de 100 países ao redor do mundo [Fonte: GoodWe_Portfolio.pdf, pág. 6].",
+        "faithfulness_fallback": 0.75,
+        "answer_relevancy_fallback": 0.714,
+        "latency_s": 3.602
+      },
+      {
+        "question": "Quantos funcionários a GoodWe informa ter no portfólio?",
+        "answer": "A GoodWe informa ter aproximadamente 5000 funcionários [Fonte: GoodWe_Portfolio.pdf, pág. 9].",
+        "faithfulness_fallback": 0.364,
+        "answer_relevancy_fallback": 0.667,
+        "latency_s": 3.723
+      }
+    ]
+  },
+  {
+    "model": "gpt-oss:120b",
+    "temperature": 0.0,
+    "top_p": 0.95,
+    "max_tokens": 512,
+    "top_k": 3,
+    "rows": [
+      {
+        "question": "Quais são os modelos da linha HCA G2 apresentados no portfólio da GoodWe?",
+        "answer": "Não encontrei essa informação nos documentos fornecidos.",
+        "faithfulness_fallback": 0.167,
+        "answer_relevancy_fallback": 0.0,
+        "latency_s": 3.326
+      },
+      {
+        "question": "Quais são as potências nominais dos modelos GW7K-HCA, GW11K-HCA e GW22K-HCA?",
+        "answer": "- GW7K‑HCA: 7 kW [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]  \n- GW11K‑HCA: 11 kW [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]  \n- GW22K‑HCA: 22 kW [Fonte: GoodWe_Manual_Produtos.pdf, pág. 1]",
+        "faithfulness_fallback": 0.5,
+        "answer_relevancy_fallback": 0.0,
+        "latency_s": 0.988
+      },
+      {
+        "question": "Qual modelo HCA é monofásico e quais modelos são trifásicos?",
+        "answer": "O modelo **GW7K‑HCA** é monofásico (RCD de 40 A e 230 V, 2 pólos)【Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1】.  \n\nOs modelos **GW11K‑HCA** e **GW22K‑HCA** são trifásicos (RCD de 25 A/400 V (4 pólos) e 40 A/400 V (4 pólos), respectivamente)【Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1】.",
+        "faithfulness_fallback": 0.397,
+        "answer_relevancy_fallback": 1.0,
+        "latency_s": 1.548
+      },
+      {
+        "question": "Qual é a tensão de operação indicada para os modelos HCA no Brasil?",
+        "answer": "A tensão de operação indicada nos documentos para os carregadores da série HCA no Brasil é:\n\n- **GW7K‑HCA** – 230 V (RCD de 40 A, 230 V, 2 P)  \n- **GW11K‑HCA** – 400 V (RCD de 25 A, 400 V, 4 P)  \n- **GW22K‑HCA** – 400 V (RCD de 40 A, 400 V, 4 P)  \n\n[Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]",
+        "faithfulness_fallback": 0.552,
+        "answer_relevancy_fallback": 0.833,
+        "latency_s": 1.852
+      },
+      {
+        "question": "Quantos cartões RFID vêm incluídos e quantos cartões a linha HCA G2 suporta por carregador?",
+        "answer": "A linha HCA G2 inclui **2 cartões RFID** e **suporta até 10 cartões por carregador**.  \n[Fonte: GoodWe_Portfolio.pdf, pág. 13]  \n[Fonte: GoodWe_Manual_Produtos.pdf, pág. 6]",
+        "faithfulness_fallback": 0.474,
+        "answer_relevancy_fallback": 0.636,
+        "latency_s": 0.768
+      },
+      {
+        "question": "Quais interfaces de comunicação estão integradas na linha HCA G2?",
+        "answer": "A linha HCA G2 possui as seguintes interfaces de comunicação integradas: RFID (com 2 cartões inclusos, suportando até 10 cartões), RS‑485, LAN, Wi‑Fi e Bluetooth. [Fonte: GoodWe_Portfolio.pdf, pág. 13]",
+        "faithfulness_fallback": 0.35,
+        "answer_relevancy_fallback": 0.833,
+        "latency_s": 0.817
+      },
+      {
+        "question": "Quais são os métodos de início da recarga disponíveis no HCA G2?",
+        "answer": "Os métodos de início da recarga disponíveis no HCA G2 são:\n\n- **Controle remoto via SEMS Portal** – permite iniciar a recarga on‑line quando o equipamento está conectado à internet【Trecho 3 — GoodWe_Manual_Produtos.pdf, pág. 1】.  \n- **Operação local por Bluetooth** – o usuário pode",
+        "faithfulness_fallback": 0.58,
+        "answer_relevancy_fallback": 1.0,
+        "latency_s": 1.978
+      },
+      {
+        "question": "Quais são os três principais modos de carregamento da linha HCA?",
+        "answer": "Os três principais modos de carregamento da linha HCA são:\n\n- **Modo Fast** – permite definir potência de carregamento, SOC mínimo da bateria e energia máxima da sessão.  \n- **Modo PV Priority** – permite definir “Min. Top Up”, tempo para atingir esse valor e energia máxima.  \n- **Modo PV & Battery** – acrescenta o limite de SOC da bateria ao controle de carregamento.  \n\n[Fonte: GoodWe_Manual_Produtos.pdf, pág. 6]",
+        "faithfulness_fallback": 0.794,
+        "answer_relevancy_fallback": 1.0,
+        "latency_s": 0.885
+      },
+      {
+        "question": "Como funciona o modo Fast?",
+        "answer": "O modo **Fast** permite que o carregador utilize energia da rede elétrica, da geração fotovoltaica ou da bateria. A potência padrão corresponde à potência nominal do equipamento, mas o usuário pode configurá‑la para um valor menor, desde que não ultrapasse esse limite nominal【Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1】.  \n\nNo modelo HCA G2, o modo Fast ainda oferece a possibilidade de definir parâmetros específicos, como a potência de carregamento, o SOC (State of Charge) mínimo da bateria e a energia máxima permitida para a sessão de carregamento【Fonte: GoodWe_Manual_Produtos.pdf, pág. 6】.",
+        "faithfulness_fallback": 0.645,
+        "answer_relevancy_fallback": 0.667,
+        "latency_s": 1.436
+      },
+      {
+        "question": "Como funciona o modo PV Priority?",
+        "answer": "O modo **PV Priority** funciona da seguinte forma:\n\n- Utiliza **apenas a energia fotovoltaica** para carregar o veículo elétrico, enquanto as cargas da residência mantêm prioridade. O excedente de energia solar é direcionado ao EV【Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1】.  \n- Exige um cenário **PV‑armazenamento‑carregamento** composto por carregador e inversor, sendo **necessária a desativação da limitação de potência do inversor**【Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1】.  \n- Para o carregador monofásico, a potência fotovoltaica deve ser **superior a 1,4 kW**; para o trifásico, **superior a 4,2 kW**【Fonte: GoodWe_Manual_Produtos.pdf, pág. 3】.  ",
+        "faithfulness_fallback": 0.664,
+        "answer_relevancy_fallback": 1.0,
+        "latency_s": 1.318
+      },
+      {
+        "question": "Como funciona o modo PV + Battery?",
+        "answer": "O modo **PV + Battery** faz com que o carregador utilize simultaneamente a energia gerada pelos painéis fotovoltaicos e a energia armazenada na bateria para recarregar o veículo, enquanto as cargas da residência mantêm prioridade. Para que esse modo funcione, é necessário que o sistema esteja configurado no cenário “PV‑armazenamento‑carregamento” e que a limitação de potência do inversor esteja desativada【Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1】.",
+        "faithfulness_fallback": 0.524,
+        "answer_relevancy_fallback": 0.667,
+        "latency_s": 1.199
+      },
+      {
+        "question": "O carregador HCA troca automaticamente entre os modos de carregamento?",
+        "answer": "Não, o carregador HCA não realiza troca automática entre os modos de carregamento. [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]",
+        "faithfulness_fallback": 0.667,
+        "answer_relevancy_fallback": 0.833,
+        "latency_s": 0.841
+      },
+      {
+        "question": "O que acontece com a recarga quando não há energia solar suficiente?",
+        "answer": "Nos modos **PV Priority** ou **PV + Battery**, se a energia solar disponível for insuficiente a recarga pode ser **pausada**. Caso a opção **“Ensure Minimum Charging Power”** esteja ativada, a rede elétrica ou a bateria assumem o fornecimento, garantindo uma potência mínima de carga (1,4 kW para carregadores de 7 kW e 4,2 kW para os de 11 kW e 22 kW). [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]",
+        "faithfulness_fallback": 0.546,
+        "answer_relevancy_fallback": 0.429,
+        "latency_s": 1.099
+      },
+      {
+        "question": "Qual é a potência mínima de carregamento para os modelos de 7 kW, 11 kW e 22 kW quando a função Ensure Minimum Charging Power está ativada?",
+        "answer": "A potência mínima garantida pela função **Ensure Minimum Charging Power** é:\n\n- **1,4 kW** para carregadores de **7 kW**.  \n- **4,2 kW** para carregadores de **11 kW** e **22 kW**.\n\n[Fonte: GoodWe_Manual_Produtos.pdf, pág. 3]  \n[Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]",
+        "faithfulness_fallback": 0.378,
+        "answer_relevancy_fallback": 0.667,
+        "latency_s": 1.076
+      },
+      {
+        "question": "Por que um veículo pode não carregar a 22 kW mesmo quando o carregador tem potência nominal de 22 kW?",
+        "answer": "A potência real de carregamento depende do carregador de bordo (OBC) do veículo. Mesmo que o carregador da GoodWe tenha potência nominal de 22 kW, um carregador trifásico de 22 kW pode entregar no máximo 1/3 da potência nominal ao veículo, se o OBC do veículo não suportar a potência total.  \n\n[Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]",
+        "faithfulness_fallback": 0.622,
+        "answer_relevancy_fallback": 0.7,
+        "latency_s": 1.125
+      },
+      {
+        "question": "Qual é a corrente mínima por fase para iniciar a carga?",
+        "answer": "A corrente mínima de partida por fase é de **6 A**. [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1] [Fonte: GoodWe_Manual_Produtos.pdf, pág. 3]",
+        "faithfulness_fallback": 0.444,
+        "answer_relevancy_fallback": 0.6,
+        "latency_s": 0.772
+      },
+      {
+        "question": "Qual é a potência mínima do OBC para carga monofásica e trifásica?",
+        "answer": "A potência mínima exigida pelo carregador de bordo (OBC) é:\n\n- **1,4 kW** para carga monofásica  \n- **4,2 kW** para carga trifásica  \n\n[Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]  \n[Fonte: GoodWe_Manual_Produtos.pdf, pág. 3]",
+        "faithfulness_fallback": 0.407,
+        "answer_relevancy_fallback": 1.0,
+        "latency_s": 0.85
+      },
+      {
+        "question": "O carregador HCA G2 pode ser instalado ao ar livre?",
+        "answer": "Sim. A ficha técnica do HCA G2 indica que a instalação pode ser interna ou externa (grau de proteção IP66 no carregador e IP55 no plugue IEC Type 2), embora o manual recomende que seja em local abrigado, ventilado e adequado para operação e manutenção. [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]",
+        "faithfulness_fallback": 0.556,
+        "answer_relevancy_fallback": 0.667,
+        "latency_s": 0.824
+      },
+      {
+        "question": "Quais são os graus de proteção IP do carregador e do plugue IEC Type 2?",
+        "answer": "O carregador possui grau de proteção **IP66** e o plugue IEC Type 2 possui grau de proteção **IP55**.  \n[Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]",
+        "faithfulness_fallback": 0.583,
+        "answer_relevancy_fallback": 0.833,
+        "latency_s": 0.779
+      },
+      {
+        "question": "Qual tipo de RCD externo é exigido pelo manual?",
+        "answer": "O manual exige a utilização de um RCD externo **tipo A**, com corrente residual nominal de **30 mA** (característica C).  \n[Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]  \n[Fonte: GoodWe_Manual_Produtos.pdf, pág. 4]",
+        "faithfulness_fallback": 0.522,
+        "answer_relevancy_fallback": 0.667,
+        "latency_s": 0.825
+      },
+      {
+        "question": "Qual cabo AC é especificado pela GoodWe para a instalação?",
+        "answer": "Não encontrei essa informação nos documentos fornecidos.",
+        "faithfulness_fallback": 0.0,
+        "answer_relevancy_fallback": 0.0,
+        "latency_s": 0.668
+      },
+      {
+        "question": "O carregador pode ser utilizado para carregar outros equipamentos além de veículos elétricos?",
+        "answer": "Não. O manual oficial afirma que o equipamento suporta apenas o carregamento de veículos elétricos e proíbe o carregamento de outros dispositivos. [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 1]",
+        "faithfulness_fallback": 0.667,
+        "answer_relevancy_fallback": 0.3,
+        "latency_s": 0.689
+      },
+      {
+        "question": "O usuário pode desmontar o carregador para realizar manutenção?",
+        "answer": "Não. O manual proíbe que o usuário desmonte os módulos do carregador; a instalação, operação, manutenção e substituição de peças devem ser realizadas por profissionais qualificados ou treinados【Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 2】. Além disso, o manual de produtos reforça que “não desmontar módulos do carregador”【Fonte: GoodWe_Manual_Produtos.pdf, pág. 6】.",
+        "faithfulness_fallback": 0.581,
+        "answer_relevancy_fallback": 0.667,
+        "latency_s": 0.889
+      },
+      {
+        "question": "O que deve ser feito em caso de anomalia no carregador?",
+        "answer": "Em caso de anomalia, acione o botão de emergência para desconectar a alimentação, não carregue o veículo se houver falha ativa ou cabo rompido e procure um profissional qualificado para diagnóstico. [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 2]",
+        "faithfulness_fallback": 0.667,
+        "answer_relevancy_fallback": 0.333,
+        "latency_s": 0.879
+      },
+      {
+        "question": "Qual aplicativo é utilizado para configuração e operação local do carregador?",
+        "answer": "Não encontrei essa informação nos documentos fornecidos.",
+        "faithfulness_fallback": 0.167,
+        "answer_relevancy_fallback": 0.0,
+        "latency_s": 0.831
+      },
+      {
+        "question": "Qual plataforma é utilizada para monitoramento e controle remoto?",
+        "answer": "A plataforma utilizada para monitoramento e controle remoto dos carregadores é o **SEMS+**【Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 2】.",
+        "faithfulness_fallback": 0.385,
+        "answer_relevancy_fallback": 1.0,
+        "latency_s": 1.178
+      },
+      {
+        "question": "Como funciona o agendamento de recarga no SEMS+?",
+        "answer": "No SEMS+ o agendamento de recarga é feito da seguinte forma:  \n\n1. Selecione a usina desejada;  \n2. Acesse a opção **Device**;  \n3. Escolha o carregador que será programado;  \n4. Utilize a função **Scheduled Charging**;  \n5. Defina o horário de início e de término, o tempo estimado de recarga, a frequência de repetição e o modo de carregamento desejado.  \n\n[Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 2]",
+        "faithfulness_fallback": 0.583,
+        "answer_relevancy_fallback": 0.75,
+        "latency_s": 0.942
+      },
+      {
+        "question": "O que é Dynamic Load Control e qual é sua finalidade?",
+        "answer": "Dynamic Load Control é o controle dinâmico de carga que ajusta a velocidade de carregamento ou pausa a recarga do veículo com base nos dados do medidor e na corrente de conexão à rede configurada. Sua finalidade é evitar o disparo do fusível principal, reiniciando automaticamente a recarga quando houver folga suficiente em relação à corrente contratada ou configurada [Fonte: GoodWe_Manual_Produtos.pdf, pág. 3] [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 2].",
+        "faithfulness_fallback": 0.637,
+        "answer_relevancy_fallback": 1.0,
+        "latency_s": 1.327
+      },
+      {
+        "question": "O que é a função AUTO Start na HCA G2?",
+        "answer": "A função **AUTO Start** na HCA G2 é um recurso que pode ser **ativado ou desativado** pelo usuário, permitindo que o carregador inicie automaticamente a carga conforme a configuração definida.  \n[Fonte: GoodWe_Manual_Produtos.pdf, pág. 6]",
+        "faithfulness_fallback": 0.355,
+        "answer_relevancy_fallback": 1.0,
+        "latency_s": 1.068
+      },
+      {
+        "question": "Como funciona a função Plug and Charge?",
+        "answer": "A função **Plug and Charge** é ativada no aplicativo SolarGo. Depois de habilitá‑la, basta conectar o plugue de recarga à porta do veículo que a carga inicia automaticamente, sem necessidade de acionar manualmente o início da recarga [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 2].  \n\nA GoodWe alerta que, se a opção **“Ensure Minimum Charging Power”** estiver desativada, a função Plug and Charge pode falhar devido ao comportamento do carregador de bordo (OBC) do veículo [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 2; GoodWe_Manual_Produtos.pdf, pág. 3].",
+        "faithfulness_fallback": 0.641,
+        "answer_relevancy_fallback": 0.8,
+        "latency_s": 1.429
+      },
+      {
+        "question": "O que significa o LED azul no carregador HCA?",
+        "answer": "O LED azul fixo indica que o carregador está em processo de carregamento. [Fonte: GoodWe_Manual_Produtos.pdf, pág. 5]",
+        "faithfulness_fallback": 0.542,
+        "answer_relevancy_fallback": 0.6,
+        "latency_s": 0.723
+      },
+      {
+        "question": "O que significa o LED verde fixo?",
+        "answer": "O LED verde fixo indica que o carregador está em espera. [Fonte: GoodWe_Manual_Produtos.pdf, pág. 5]",
+        "faithfulness_fallback": 0.595,
+        "answer_relevancy_fallback": 0.75,
+        "latency_s": 0.821
+      },
+      {
+        "question": "O que significa o LED verde piscando?",
+        "answer": "Não encontrei essa informação nos documentos fornecidos.",
+        "faithfulness_fallback": 0.0,
+        "answer_relevancy_fallback": 0.0,
+        "latency_s": 0.0
+      },
+      {
+        "question": "O que significa o LED vermelho fixo?",
+        "answer": "O LED vermelho fixo indica falha no carregador. [Fonte: GoodWe_FAQ_Carregamento.pdf, pág. 2]",
+        "faithfulness_fallback": 0.667,
+        "answer_relevancy_fallback": 0.75,
+        "latency_s": 2.794
+      },
+      {
+        "question": "O carregador pode ser utilizado durante uma tempestade com chuva e raios?",
+        "answer": "Não. O manual indica que o carregador **não deve ser usado durante tempestades com raios e chuva**; caso seja imprescindível, é necessário garantir que o plugue e a porta de carga estejam secos【Trecho 3 — GoodWe_Manual_Produtos.pdf, pág. 6】.",
+        "faithfulness_fallback": 0.704,
+        "answer_relevancy_fallback": 0.625,
+        "latency_s": 1.039
+      },
+      {
+        "question": "Em que ano a GoodWe foi fundada?",
+        "answer": "A GoodWe foi fundada em **2021**. [Fonte: GoodWe_Portfolio.pdf, pág. 3]",
+        "faithfulness_fallback": 0.475,
+        "answer_relevancy_fallback": 0.75,
+        "latency_s": 0.605
+      },
+      {
+        "question": "Quantos países possuem instalações acumuladas de inversores GoodWe, segundo o portfólio?",
+        "answer": "Mais de 100 países possuem instalações acumuladas de inversores GoodWe, conforme indicado no portfólio [Fonte: GoodWe_Portfolio.pdf, pág. 6].",
+        "faithfulness_fallback": 0.438,
+        "answer_relevancy_fallback": 0.778,
+        "latency_s": 0.703
+      },
+      {
+        "question": "Qual é a capacidade instalada acumulada de inversores GoodWe apresentada no portfólio?",
+        "answer": "A capacidade instalada acumulada de inversores GoodWe apresentada no portfólio é **100 GW**.  \n[Fonte: GoodWe_Portfolio.pdf, pág. 6]",
+        "faithfulness_fallback": 0.537,
+        "answer_relevancy_fallback": 1.0,
+        "latency_s": 0.795
+      },
+      {
+        "question": "Quantos funcionários a GoodWe informa ter no portfólio?",
+        "answer": "A GoodWe informa que possui aproximadamente **5 000 funcionários**.  \n[Fonte: GoodWe_Portfolio.pdf, pág. 9]",
+        "faithfulness_fallback": 0.267,
+        "answer_relevancy_fallback": 0.5,
+        "latency_s": 0.73
+      }
+    ]
+  }
+]

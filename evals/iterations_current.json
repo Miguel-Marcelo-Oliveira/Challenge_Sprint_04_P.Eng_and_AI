@@ -1,0 +1,32 @@
+[
+  {
+    "iteration": "iteracao_1",
+    "chunk_size": 512,
+    "chunk_overlap": 64,
+    "prompt_version": "v1.0",
+    "pages": 21,
+    "chunks": 51,
+    "evaluation_method": "manual_fallback",
+    "faithfulness": 0.53,
+    "answer_relevancy": 0.581,
+    "mean_score": 0.555,
+    "positive_gain": null,
+    "gain_vs_previous": null,
+    "ragas_error": "ModuleNotFoundError: No module named 'langchain_community.chat_models.vertexai'"
+  },
+  {
+    "iteration": "iteracao_2",
+    "chunk_size": 800,
+    "chunk_overlap": 100,
+    "prompt_version": "v2.0",
+    "pages": 21,
+    "chunks": 51,
+    "evaluation_method": "manual_fallback",
+    "faithfulness": 0.527,
+    "answer_relevancy": 0.597,
+    "mean_score": 0.562,
+    "positive_gain": true,
+    "gain_vs_previous": 0.007,
+    "ragas_error": "ModuleNotFoundError: No module named 'langchain_community.chat_models.vertexai'"
+  }
+]

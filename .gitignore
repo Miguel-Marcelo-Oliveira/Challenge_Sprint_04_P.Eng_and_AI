@@ -1,0 +1,37 @@
+# Segredos e variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# Ambientes virtuais Python
+.venv/
+venv/
+env/
+
+# Cache e arquivos compilados do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Configurações da IDE
+.idea/
+
+# Banco vetorial local
+data/chroma_db/
+
+# Logs
+*.log
+
+# Arquivos temporários do sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Cobertura de testes
+.coverage
+htmlcov/
+
+# Cache de ferramentas de teste e análise
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
